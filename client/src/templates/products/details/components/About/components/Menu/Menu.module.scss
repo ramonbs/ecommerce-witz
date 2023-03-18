@@ -1,0 +1,38 @@
+@use '@styles/utils/colors' as *;
+@use '@styles/utils/mixins' as *;
+
+.menu {
+    margin-bottom: 1.6rem;
+
+    > ul {
+        display: flex;
+        gap: 3.2rem;
+        list-style: none;
+
+        > li {
+            @include linkEffect;
+        }
+    }
+
+    .active {
+        color: $secondary;
+        position: relative;
+    
+        &::after {
+            content: '';
+            width: 60%;
+            height: .2rem;
+            background-color: $secondary;
+    
+            position: absolute;
+            bottom: -.4rem;
+            left: 0;
+        }
+    }
+}
+
+.tab {
+    border: .1rem solid rgba($black, .1);
+    border-radius: .4rem;
+    padding: 1.6rem;
+}

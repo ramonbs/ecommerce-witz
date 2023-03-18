@@ -1,0 +1,65 @@
+@use '@styles/utils/colors' as *;
+@use '@styles/utils/mixins' as *;
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3.2rem;
+
+    margin-bottom: 12.8rem;
+
+    > a:link, a:visited {
+        color: $black;
+        transition: .3s all ease-in-out;
+
+        &:hover, &:active {
+            color: $secondary;
+        }
+    }
+}
+
+.login {
+    padding: 3.2rem;
+    border-radius: .4rem;
+    border: .1rem solid rgba($black, .1);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3.2rem;
+
+    width: min(100%, 50rem);
+
+    > label {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+
+    > .controls {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        
+        > .remember {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            align-items: center;
+            gap: .8rem;
+        }
+
+        > a:link, a:visited {
+            color: $black;
+            font-size: 1.4rem;
+            transition: .3s all ease-in-out;
+
+            &:hover, &:active {
+                color: $secondary;
+            }
+        }
+    }
+}

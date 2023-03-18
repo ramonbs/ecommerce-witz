@@ -1,0 +1,15 @@
+@use '@styles/utils/colors' as *;
+
+.accordion {
+    width: min(100%, 80rem);
+    height: max-content;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .8rem;
+    
+    overflow: hidden;
+    margin-inline: auto;
+    margin-bottom: 6.4rem;
+}

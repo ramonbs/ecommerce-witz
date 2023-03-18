@@ -1,0 +1,81 @@
+@use '@styles/utils/colors' as *;
+
+.carousel {
+    width: 100%;
+    margin: 6.4rem 0;
+    position: relative;
+
+    > .slider {
+        display: flex;
+        gap: 1.6rem;
+        overflow-x: scroll;
+        border-radius: .4rem;
+
+        scroll-behavior: smooth;
+        scroll-snap-type: x mandatory;
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
+    }
+
+    > .backward {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+
+        height: calc(100% - 6.2rem);
+        width: 4.8rem;
+        background: linear-gradient(90deg, rgba($white, .2) 0, transparent 100%);
+        border-top-left-radius: .4rem;
+        border-bottom-left-radius: .4rem;
+        
+        transition: .2s all ease-in-out;
+        z-index: 999;
+        cursor: pointer;
+
+        & > svg {
+            @extend .icon;
+        }
+
+        &:hover {
+            background: linear-gradient(90deg, rgba($white, .4) 0, transparent 100%);
+        }
+    }
+
+    > .forward {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+
+        height: calc(100% - 6.2rem);
+        width: 4.8rem;
+        background: linear-gradient(90deg, transparent 0, rgba($white, .2) 100%);
+        border-top-right-radius: .4rem;
+        border-bottom-right-radius: .4rem;
+        
+        transition: .2s all ease-in-out;
+        z-index: 999;
+        cursor: pointer;
+
+        & > svg {
+            @extend .icon;
+            right: 0;
+        }
+
+        &:hover {
+            background: linear-gradient(90deg, transparent 0, rgba($white, .4) 100%);
+        }
+    }
+}
+
+.icon {
+    position: absolute;
+    top: 50%;
+
+    font-size: 3.2rem;
+    color: $white;
+
+    transform: translateY(-50%);
+    cursor: pointer;
+}

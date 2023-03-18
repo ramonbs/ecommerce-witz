@@ -1,0 +1,55 @@
+.showcase {
+    width: min(100%, 50rem);
+    user-select: none;
+
+    display: flex;
+    align-items: flex-start;
+    gap: 3.2rem;
+
+    > .thumbnails {
+        display: flex;
+        flex-direction: column;
+        gap: .8rem;
+
+        > figure {
+            width: 8rem;
+            border-radius: .4rem;
+            overflow: hidden;
+        
+            cursor: pointer;
+
+            > img {
+                display: block;
+                width: 100%;
+            }
+
+            @media (max-width: 960px) {
+                width: 7rem;
+            }
+
+            @media (max-width: 480px) {
+                width: 6rem;
+            }
+
+            @media (max-width: 364px) {
+                width: 4rem;
+            }
+        }
+    }
+
+    > .active {
+        border-radius: .4rem;
+        overflow: hidden;
+
+        > img {
+            display: block;
+            height: 100%;
+            width: 100%;
+            object-fit: contain;
+        }
+    }
+
+    @media (max-width: 480px) {
+        gap: 1.6rem; 
+    }
+}

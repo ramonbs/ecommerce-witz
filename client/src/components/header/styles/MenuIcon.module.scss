@@ -1,0 +1,16 @@
+.menu_icon {
+    display: none;
+
+    @media (max-width: 880px) {
+        display: grid;
+        place-content: center;
+        padding: .5rem;
+        border-radius: .8rem;
+        transition: .2s all ease-in-out;
+        cursor: pointer;
+
+        > svg {
+            font-size: 2.2rem;
+        }
+    }
+}

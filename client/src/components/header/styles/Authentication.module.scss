@@ -1,0 +1,35 @@
+@use '@styles/utils/colors' as *;
+
+.authentication {
+    display: flex;
+    gap: 1.6rem;
+
+    > button {
+        border: none;
+        padding: .8rem 1.6rem;
+        border-radius: .4rem;
+        cursor: pointer;
+        transition: .3s all ease-in-out;
+    }
+
+    > .login {
+        background-color: transparent;
+        
+        &:hover {
+            box-shadow: 0 0 0 .1rem $primary inset;
+        }
+    }
+
+    > .register {
+        background-color: $primary;
+        color: $white;
+
+        &:hover {
+            background-color: $primary-shade;
+        }
+    }
+
+    @media (max-width: 880px) {
+        display: none;
+    }
+}

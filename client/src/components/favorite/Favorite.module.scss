@@ -1,0 +1,26 @@
+@use '@styles/utils/colors' as *;
+
+.favorite {
+    font-size: 2.4rem;
+    color: $black;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  
+    > .enable {
+        transition: .3s all ease-in-out;
+        
+        &:hover {
+            color: $primary-shade;
+        }
+    }
+    
+    > .disable {
+        color: $primary;
+        transition: .3s all ease-in-out;
+      
+        &:hover {
+            color: $primary-shade;
+        }
+    }
+}

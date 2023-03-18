@@ -1,0 +1,15 @@
+@use '@styles/utils/colors' as *;
+
+.input {
+    background-color: transparent;
+    border: none;
+    border-bottom: .1rem solid rgba($black, .5);
+    padding: .8rem;
+    margin-top: .8rem;
+    color: $black;
+
+    &:focus {
+        outline: none;
+        border-bottom: .1rem solid $secondary;
+    }
+}

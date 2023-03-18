@@ -1,0 +1,17 @@
+@use '@styles/utils/colors' as *;
+
+.menu_overlay {
+    position: absolute;
+    left: 0;
+
+    width: 100vw;
+    height: calc(100vh);
+    padding: 1.6rem;
+    background-color: $white;
+    border-top: .1rem solid rgba($black, .1);
+    transition: .2s all ease-in-out;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

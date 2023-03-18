@@ -1,0 +1,41 @@
+@use '@styles/utils/colors' as *;
+
+$headerHeight: 12.1rem;
+
+@mixin addMarginFromHeader($margin) {
+    margin-top: $headerHeight + $margin;
+}
+
+@mixin linkEffect {
+    cursor: pointer;
+    transition: .2s all ease-in-out;
+    position: relative;
+
+    &:hover, &:active {
+        color: $secondary;
+
+        &::after {
+            content: '';
+            width: 0;
+            height: .2rem;
+            background-color: $secondary;
+
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            transform: translateY(200%);
+
+            animation: slideIn .2s ease-in-out forwards;
+        }
+    }
+}
+
+@keyframes slideIn {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 60%;
+    }
+}

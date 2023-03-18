@@ -1,0 +1,73 @@
+@use '@styles/utils/colors' as *;
+
+.container {
+    font-family: 'Sora', sans-serif;
+    display: flex;
+    flex-direction: column;
+
+    width: 30%;
+
+    padding: 1rem;
+    margin-left: auto;
+
+    > .information_containers {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+
+        border: $black 0.1rem solid;
+        border-radius: .4rem;
+
+        padding: 1rem;
+        margin-bottom: 1rem;
+
+        > .information {
+            display: flex;
+            justify-content: space-around;
+
+            > .title {
+                font-size: 1.4rem;
+                font-weight: 600;
+
+                margin: 0.5rem;
+
+                width: 10rem;
+            }
+
+            > .value {
+                font-size: 1.4rem;
+                font-weight: 400;
+
+                margin: 0.5rem;
+            }
+        }
+    }
+
+    > .buy_button {
+        @extend %button;
+
+        background-color: $primary;
+        color: $white;
+        font-weight: 600;
+        text-transform: uppercase;
+
+        &:hover {
+            background-color: $primary-shade;
+        }
+    }
+
+    @media (max-width: 880px) {
+        width: 100%;
+
+        margin: 0;
+        padding: 0;
+    }
+}
+
+%button {
+    border: none;
+    border-radius: .4rem;
+    padding: .8rem 1.6rem;
+    cursor: pointer;
+    transition: .3s all ease-in-out;
+}

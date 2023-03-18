@@ -1,0 +1,134 @@
+@use '@styles/utils/colors' as *;
+
+.details {
+    width: min(100%, 37rem);
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+
+    > .title {
+        font-size: 2.8rem;
+        margin-bottom: 3.2rem;
+    }
+
+    > .price {
+        width: fit-content;
+        font-size: 2.2rem;
+        font-weight: 900;
+        position: relative;
+        margin-bottom: 3.2rem;
+
+        &::after {
+            content: '';
+            width: 60%;
+            height: .4rem;
+            background-color: $secondary;
+
+            display: block;
+            position: absolute;
+        }
+    }
+
+    > .category {
+        margin-bottom: 3.2rem;
+        
+        > span {
+            margin-left: .4rem;
+            color: $secondary;
+            font-weight: 600;
+            font-size: 1.4rem;
+            text-transform: uppercase;
+        }
+    }
+
+    > .options {
+        display: flex;
+        flex-direction: column;
+        gap: 1.6rem;
+        margin-bottom: 3.2rem;
+
+        > .size, > .color {
+            display: flex;
+            flex-direction: column;
+            gap: .8rem;
+            width: 100%;
+
+            font-size: 1.6rem;
+            text-transform: uppercase;
+            font-weight: 600;
+
+            > select {
+                padding: .4rem;
+                background-color: transparent;
+                border: none;
+                border-bottom: .1rem solid rgba($black, .25);
+                
+                cursor: pointer;
+
+                &:focus {
+                    outline: none;
+                }
+            }
+        }
+    }
+
+
+    > .actions {
+        display: flex;
+        gap: 1.6rem;
+        justify-content: flex-end;
+        margin-bottom: 3.2rem;
+
+        .share {
+            font-size: 2.4rem;
+            transition: .3s all ease-in-out;
+            cursor: pointer;
+            
+            &:hover {
+                color: $secondary;
+            }
+        }
+
+
+    }
+
+    > .addToCart {
+        @extend %button;
+
+        color: $black;
+        border: .1rem solid $lightgray !important;
+        background-color: transparent;
+        margin-bottom: 1.6rem;
+
+        &:hover {
+            color: $white;
+            background-color: $primary;
+            border-color: transparent !important;
+        }
+    }
+
+    > .buy {
+        @extend %button;
+
+        background-color: $primary;
+        color: $white;
+        font-weight: 600;
+        text-transform: uppercase;
+
+
+        &:hover {
+            background-color: $primary-shade;
+        }
+    }
+}
+
+%button {
+    text-decoration: none;
+
+    border: none;
+    border-radius: .4rem;
+    padding: .8rem 1.6rem;
+    cursor: pointer;
+    transition: .3s all ease-in-out;
+}

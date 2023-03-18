@@ -1,0 +1,29 @@
+@use '@styles/utils/colors' as *;
+
+.actions {
+    display: flex;
+    align-items: center;
+    gap: 1.6rem;
+
+    > .button {
+        display: grid;
+        place-content: center;
+
+        padding: .5rem;
+        border-radius: .4rem;
+        transition: .3s all ease-in-out;
+        cursor: pointer;
+
+        > svg {
+            font-size: 2.2rem;
+        }
+
+        &:hover {
+            background-color: $primary;
+        }
+    }
+
+    @media (max-width: 880px) {
+        display: none;
+    }
+}

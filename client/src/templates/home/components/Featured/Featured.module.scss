@@ -1,0 +1,77 @@
+@use '@styles/utils/colors' as *;
+
+.featured {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, auto);
+    gap: 3.2rem;
+
+    margin-bottom: 6.4rem;
+
+    > div {
+        @extend %card;
+    }
+
+    > .delivery {
+        grid-row: 1 / -1;
+        flex-direction: column;
+    }
+
+    > .location {
+        grid-column: 3 / -1;
+        grid-row: 1 / -1;
+        flex-direction: column;
+    }
+
+    @media (max-width: 820px) {
+        gap: 1.6rem;
+    }
+
+    @media (max-width: 620px) {
+        display: none;
+    }
+}
+
+%card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.6rem;
+
+    padding: 1.6rem;
+    border: .2rem solid rgba($black, .1);
+    border-radius: .4rem;
+
+    > img {
+        width: 6.4rem;
+        user-select: none;
+
+        filter: opacity(25%);
+    }
+
+    > .description {
+        text-align: center;
+
+        > h3 {
+            font-size: 1.4rem;
+            text-transform: uppercase;
+            margin-bottom: .8rem;
+
+            > span {
+                color: $secondary;
+            }
+        }
+
+        > p {
+            font-size: 1.4rem;
+        }
+    }
+
+    @media (max-width: 820px) {
+        flex-direction: column;
+
+        > img {
+            width: 4.8rem;
+        }
+    }
+}

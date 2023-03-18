@@ -1,0 +1,38 @@
+@use '@styles/utils/colors' as *;
+
+.departments {
+    margin-bottom: 6.4rem;
+
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    gap: 2.2rem;
+
+    > svg {
+        font-size: 3.2rem;
+        color: $black;
+        cursor: pointer;
+        transition: .3s all;
+
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+    
+    > .carousel {
+        display: flex;
+        gap: 1.6rem;
+        
+        overflow-x: scroll;
+        scroll-behavior: smooth;
+        scroll-snap-type: x mandatory;
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
+    }
+
+    @media (max-width: 490px) {
+        gap: .8rem;
+    }
+}

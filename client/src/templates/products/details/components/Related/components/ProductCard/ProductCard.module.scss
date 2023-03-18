@@ -1,0 +1,27 @@
+@use '@styles/utils/colors' as *;
+
+.product_card {
+    width: fit-content;
+    scroll-snap-align: start;
+    cursor: pointer;
+
+    > img {
+        display: block;
+        width: 20rem;
+        border-radius: .4rem;
+        margin-bottom: .8rem;
+        aspect-ratio: 4/6;
+        object-fit: cover;
+    }
+
+    .title {
+        padding: 0 .4rem;
+        margin-bottom: .4rem;
+    }
+
+    > .price {
+        padding: 0 .4rem;
+        font-size: 1.4rem;
+        color: rgba($black, .8);
+    }
+}

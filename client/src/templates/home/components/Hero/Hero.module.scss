@@ -1,0 +1,17 @@
+@use '@styles/utils/colors' as *;
+@use '@styles/utils/mixins' as *;
+
+.hero {
+    border-radius: .4rem;
+    overflow: hidden;
+    margin-bottom: 6.4rem;
+
+    > img {
+        display: block;
+        width: 100%;
+        object-fit: cover;
+        transition: .4s all ease-in-out;
+
+        user-select: none;
+    }
+}

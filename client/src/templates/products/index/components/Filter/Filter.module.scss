@@ -1,0 +1,71 @@
+@use '@styles/utils/colors' as *;
+
+.filter {
+    background-color: #f1f1f1;
+    padding: 3.2rem;
+    margin-bottom: 6.4rem;
+
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 3.2rem;
+
+    > label {
+        font-size: 1.4rem;
+        text-transform: uppercase;
+        font-weight: 600;
+
+        display: flex;
+        flex-direction: column;
+    }
+
+    input, select {
+        border: none;
+        border-bottom: .1rem solid $lightgray;
+        padding: .8rem 1.6rem;
+        margin-top: .8rem;
+        width: 100%;
+        flex-shrink: 0;
+    }
+
+    .price {
+        margin-top: .8rem;
+
+        > div {
+            display: grid;
+            grid-template-columns: auto 1fr auto;
+            align-items: center;
+            gap: .4rem;
+
+            > span {
+                flex-shrink: 0;
+            }
+
+            > input {
+                padding: .8rem 0;
+                margin-top: 0;
+            }
+        }
+    }
+
+    .cta {
+        border: none;
+        margin-top: .8rem;
+        padding: .8rem 1.6rem;
+        background-color: $primary;
+        color: $white;
+        transition: .3s all ease-in-out;
+        cursor: pointer;
+
+        &:hover {
+            background-color: $primary-shade;
+        }
+    }
+
+    @media (max-width: 900px) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (max-width: 535px) {
+        grid-template-columns: 1fr;
+    }
+}

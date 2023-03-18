@@ -1,0 +1,28 @@
+@use '@styles/utils/colors' as *;
+
+.menu_header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3.2rem;
+
+    padding: 3.2rem;
+    border-bottom: .1rem solid rgba($black, .1);
+
+    > .authentication {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 3.2rem;
+
+        > a:link, a:visited {
+            text-decoration: none;
+            color: $black;
+        }
+    }
+
+    > a:link, a:visited {
+        text-decoration: none;
+        color: $black;
+    }
+}
